@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="alertBox" class="alert"></div>
+    <div class="container">
+        <h1>Caesar Cipher Lab</h1>
+
+        <!-- Encryption Form -->
+        <h2>Encrypt</h2>
+        <div class="input-group">
+            <label for="fullName">Full Name (Required):</label>
+            <input type="text" id="fullName" placeholder="Enter full name">
+        </div>
+        <div class="input-group">
+            <label for="yearLevel">Year Level (Required):</label>
+            <input type="number" id="yearLevel" min="1" max="4" placeholder="Enter year level">
+        </div>
+        <div class="input-group">
+            <label for="course">Course (Required):</label>
+            <input type="text" id="course" placeholder="Enter course (e.g., BSIT)">
+        </div>
+        <div class="input-group">
+            <label for="encryptKey">Shift Key (1-25) (Required):</label>
+            <input type="number" id="encryptKey" min="1" max="25" placeholder="Enter shift key">
+        </div>
+        <button onclick="encryptText()">Encrypt</button>
+        <div class="output">
+            <p><strong>Plaintext:</strong> <span id="plaintext"></span></p>
+            <p><strong>Ciphertext:</strong> <span id="ciphertext"></span></p>
+        </div>
+
+        <hr>
+
+        <!-- Decryption Form -->
+        <h2>Decrypt</h2>
+        <div class="input-group">
+            <label for="decryptInput">Ciphertext (Required):</label>
+            <input type="text" id="decryptInput" placeholder="Enter ciphertext to decrypt">
+        </div>
+        <div class="input-group">
+            <label for="decryptKey">Shift Key (1-25):</label>
+            <input type="number" id="decryptKey" min="1" max="25" placeholder="Enter shift key">
+        </div>
+        <button onclick="decryptText()">Decrypt</button>
+        <div class="output">
+            <p><strong>Decrypted Text:</strong> <span id="decryptedResult"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
